@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f7ff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: #004080;
+    color: white;
+}
+
+.header-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    margin-left: -20px;
+}
+
+.left div {
+    display: flex;
+    flex-direction: column;
+    margin-top: -40px;
+    margin-left: -10px;
+}
+
+.left p {
+    margin: 0;
+}
+
+.logo {
+    max-height: 140px;
+    margin-right: 5px;
+}
+
+.right {
+    text-align: right;
+}
+
+.right p {
+    margin: 2px 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+.about, .why-choose-us {
+    text-align: left;
+    padding: 20px;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: -20px;
+}
+
+.why-choose-us-logo {
+    text-align: center;
+    margin-top: -10px;
+}
+
+.why-choose-us ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    margin-top: -10px;
+}
+
+.why-choose-us li {
+    margin-bottom: 10px;
+}
+
+.services {
+    text-align: center;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Сетка 3 на 4 */
+    grid-gap: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-box img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.cta {
+    text-align: center; /* Скидка по центру */
+    background-color: #0080ff; /* Темно-голубой фон */
+    color: white;
+    padding: 20px;
+    width: 60%; /* Ширина 60% экрана */
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 60px;
+}
+
+footer {
+    text-align: center; /* Футер по центру */
+    padding: 10px;
+    background-color: #002060; /* Темно-голубой фон */
+    color: white;
+}
+
+@media (min-width: 768px) and (max-width: 1410px) {
+    .about, .why-choose-us {
+        width: 70%;
+        font-size: 1.1em; /* Увеличить размер шрифта */
+    }
+
+    header {
+        font-size: 1.1em; /* Увеличить размер шрифта в хедере */
+    }
+
+    .services {
+        grid-template-columns: repeat(2, 1fr); /* Сетка 2 на 4 для планшетов */
+    }
+}
+
+/* Медиа-запросы для экрана меньше 768px */
+@media (max-width: 768px) {
+    .about, .why-choose-us {
+        width: 80%;
+    }
+
+    .services {
+        grid-template-columns: repeat(2, 1fr); /* Сетка 2 на 2 для планшетов */
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right {
+        text-align: center;
+    }
+}
+
+/* Медиа-запросы для экрана меньше 480px */
+@media (max-width: 480px) {
+    .about, .why-choose-us {
+        width: 90%;
+    }
+
+    .services {
+        grid-template-columns: 1fr; /* Сетка 1 на 1 для мобильных устройств */
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right {
+        text-align: center;
+    }
+}
